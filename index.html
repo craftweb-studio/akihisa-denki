@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社アキヒサ電機|千葉県千葉市中央区の電気工事会社</title>
+<meta name="description" content="千葉県千葉市中央区の電気工事会社、株式会社アキヒサ電機。コンセント工事・照明設備工事・ネオン設備工事・引込線工事・交通信号設備工事・避雷針工事・電気防食工事に対応。TEL.043-266-1576">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d2334;
+  --navy-2:#143a55;
+  --navy-3:#1b4a6b;
+  --copper:#c2752a;
+  --copper-light:#e09a4e;
+  --amber:#ffc845;
+  --paper:#f7f6f2;
+  --white:#ffffff;
+  --ink:#22303c;
+  --ink-soft:#5a6b78;
+  --line:#e3e1da;
+  --serif:"Zen Old Mincho","Hiragino Mincho ProN",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --shadow:0 8px 30px rgba(13,35,52,.10);
+  --radius:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  font-family:var(--sans);
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.9;
+  font-size:15.5px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ===== 共通 ===== */
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:13px;letter-spacing:.18em;color:var(--copper);
+  font-weight:700;margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--copper)}
+.sec-title{
+  font-family:var(--serif);
+  font-size:clamp(26px,4vw,38px);
+  font-weight:600;letter-spacing:.06em;
+  color:var(--navy);line-height:1.4;
+}
+.sec-lead{margin-top:18px;color:var(--ink-soft);max-width:680px}
+
+/* 電流ライン(シグネチャー) */
+.current-line{position:relative;height:2px;background:linear-gradient(90deg,transparent,var(--line) 12%,var(--line) 88%,transparent);margin:0 auto;max-width:1120px;overflow:visible}
+.current-line::after{
+  content:"";position:absolute;top:50%;left:0;width:64px;height:4px;
+  transform:translateY(-50%);border-radius:4px;
+  background:linear-gradient(90deg,transparent,var(--amber),var(--copper-light),transparent);
+  filter:drop-shadow(0 0 6px rgba(255,200,69,.8));
+  animation:flow 4.5s linear infinite;
+}
+@keyframes flow{
+  0%{left:-8%;opacity:0}
+  8%{opacity:1}
+  92%{opacity:1}
+  100%{left:104%;opacity:0}
+}
+
+/* スクロールリビール */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1)}
+.reveal.is-in{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.1s}
+.reveal[data-delay="2"]{transition-delay:.2s}
+.reveal[data-delay="3"]{transition-delay:.3s}
+.reveal[data-delay="4"]{transition-delay:.4s}
+
+/* ===== ヘッダー ===== */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(13,35,52,.0);
+  transition:background .35s,box-shadow .35s,backdrop-filter .35s;
+}
+header.scrolled{background:rgba(13,35,52,.92);backdrop-filter:blur(10px);box-shadow:0 2px 20px rgba(0,0,0,.25)}
+.header-inner{
+  max-width:1180px;margin:0 auto;padding:0 24px;
+  height:72px;display:flex;align-items:center;justify-content:space-between;
+}
+.logo{display:flex;flex-direction:column;line-height:1.3;color:#fff}
+.logo .co{font-family:var(--serif);font-size:19px;font-weight:700;letter-spacing:.08em}
+.logo .sub{font-size:10.5px;letter-spacing:.14em;color:rgba(255,255,255,.65)}
+nav.gnav{display:flex;align-items:center;gap:34px}
+nav.gnav a{
+  color:rgba(255,255,255,.88);font-size:14px;font-weight:500;letter-spacing:.1em;
+  position:relative;padding:6px 0;
+}
+nav.gnav a::after{
+  content:"";position:absolute;left:0;bottom:0;width:0;height:2px;
+  background:var(--amber);transition:width .3s;
+}
+nav.gnav a:hover::after{width:100%}
+.head-tel{
+  display:flex;align-items:center;gap:10px;
+  background:var(--copper);color:#fff;
+  padding:10px 20px;border-radius:50px;
+  font-weight:700;letter-spacing:.05em;
+  transition:transform .25s,box-shadow .25s,background .25s;
+  box-shadow:0 4px 16px rgba(194,117,42,.35);
+}
+.head-tel:hover{transform:translateY(-2px);background:var(--copper-light);box-shadow:0 8px 22px rgba(194,117,42,.45)}
+.head-tel svg{width:17px;height:17px;fill:#fff}
+.head-tel .num{font-size:17px}
+
+/* ハンバーガー */
+.menu-btn{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;position:relative;z-index:120}
+.menu-btn span{position:absolute;left:10px;width:24px;height:2px;background:#fff;transition:.35s;border-radius:2px}
+.menu-btn span:nth-child(1){top:15px}
+.menu-btn span:nth-child(2){top:22px}
+.menu-btn span:nth-child(3){top:29px}
+.menu-btn.open span:nth-child(1){top:22px;transform:rotate(45deg)}
+.menu-btn.open span:nth-child(2){opacity:0}
+.menu-btn.open span:nth-child(3){top:22px;transform:rotate(-45deg)}
+.sp-nav{
+  position:fixed;inset:0;background:rgba(13,35,52,.97);backdrop-filter:blur(8px);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;
+  opacity:0;visibility:hidden;transition:.4s;z-index:110;
+}
+.sp-nav.open{opacity:1;visibility:visible}
+.sp-nav a{color:#fff;font-family:var(--serif);font-size:21px;letter-spacing:.12em}
+.sp-nav .sp-tel{background:var(--copper);padding:14px 34px;border-radius:50px;font-family:var(--sans);font-weight:700;font-size:18px}
+
+/* ===== ヒーロー ===== */
+.hero{
+  position:relative;min-height:100svh;
+  display:flex;align-items:center;
+  background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 60%,var(--navy-3) 100%);
+  color:#fff;overflow:hidden;padding:120px 0 80px;
+}
+.hero-circuit{position:absolute;inset:0;width:100%;height:100%;opacity:.5;pointer-events:none}
+.hero-circuit path{fill:none;stroke:rgba(255,255,255,.10);stroke-width:1.5}
+.hero-circuit circle.node{fill:rgba(255,255,255,.18)}
+.pulse-dot{fill:var(--amber);filter:drop-shadow(0 0 6px rgba(255,200,69,.9))}
+.hero-inner{position:relative;z-index:2;max-width:1120px;margin:0 auto;padding:0 24px;width:100%}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:13px;letter-spacing:.22em;color:var(--amber);font-weight:500;
+  border:1px solid rgba(255,200,69,.4);border-radius:50px;padding:8px 20px;
+  margin-bottom:30px;
+}
+.hero-eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px rgba(255,200,69,.9);animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(32px,5.6vw,58px);
+  font-weight:600;line-height:1.55;letter-spacing:.08em;
+}
+.hero h1 .accent{color:var(--amber)}
+.hero-sub{
+  margin-top:26px;font-size:clamp(14px,1.6vw,16.5px);
+  color:rgba(255,255,255,.82);line-height:2.1;letter-spacing:.06em;max-width:620px;
+}
+.hero-cta{margin-top:44px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.tel-card{
+  display:flex;align-items:center;gap:16px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);
+  border-radius:var(--radius);padding:18px 28px;
+  backdrop-filter:blur(6px);
+  transition:transform .3s,border-color .3s,background .3s;
+}
+.tel-card:hover{transform:translateY(-3px);border-color:var(--amber);background:rgba(255,255,255,.1)}
+.tel-card .icon{
+  width:46px;height:46px;border-radius:50%;
+  background:var(--copper);display:grid;place-items:center;flex-shrink:0;
+  box-shadow:0 0 0 0 rgba(194,117,42,.5);
+  animation:ring 2.8s ease-out infinite;
+}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(224,154,78,.55)}70%{box-shadow:0 0 0 16px rgba(224,154,78,0)}100%{box-shadow:0 0 0 0 rgba(224,154,78,0)}}
+.tel-card .icon svg{width:22px;height:22px;fill:#fff}
+.tel-card .label{font-size:12px;letter-spacing:.12em;color:rgba(255,255,255,.7)}
+.tel-card .num{font-size:clamp(24px,3.4vw,32px);font-weight:700;letter-spacing:.04em;line-height:1.2;color:#fff}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:10px;
+  color:#fff;font-weight:500;letter-spacing:.1em;font-size:14px;
+  border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:6px;
+  transition:.3s;
+}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+.btn-ghost svg{width:14px;height:14px;fill:currentColor;transition:transform .3s}
+.btn-ghost:hover svg{transform:translateX(4px)}
+.hero-load .hl{opacity:0;transform:translateY(28px);animation:heroUp .9s cubic-bezier(.22,.61,.36,1) forwards}
+.hero-load .hl:nth-child(1){animation-delay:.15s}
+.hero-load .hl:nth-child(2){animation-delay:.35s}
+.hero-load .hl:nth-child(3){animation-delay:.55s}
+.hero-load .hl:nth-child(4){animation-delay:.78s}
+@keyframes heroUp{to{opacity:1;transform:none}}
+.scroll-sign{
+  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+  color:rgba(255,255,255,.55);font-size:11px;letter-spacing:.3em;
+  display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2;
+}
+.scroll-sign::after{content:"";width:1px;height:42px;background:linear-gradient(180deg,rgba(255,255,255,.6),transparent);animation:drop 1.8s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ===== 信頼バー ===== */
+.trust{background:var(--navy);color:#fff;padding:0}
+.trust-grid{
+  max-width:1120px;margin:0 auto;padding:34px 24px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.trust-item{display:flex;align-items:center;gap:16px;justify-content:center}
+.trust-item .t-icon{width:44px;height:44px;flex-shrink:0;display:grid;place-items:center;border:1px solid rgba(255,200,69,.45);border-radius:50%}
+.trust-item .t-icon svg{width:21px;height:21px;fill:var(--amber)}
+.trust-item .t-txt{font-size:13px;line-height:1.7;letter-spacing:.05em}
+.trust-item .t-txt strong{display:block;font-size:15px;font-weight:700;letter-spacing:.08em}
+
+/* ===== 事業内容 ===== */
+.services{background:var(--paper)}
+.svc-grid{
+  margin-top:54px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:26px;
+}
+.svc-card{
+  background:var(--white);border-radius:var(--radius);
+  border:1px solid var(--line);
+  box-shadow:0 2px 12px rgba(13,35,52,.05);
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:transform .35s cubic-bezier(.22,.61,.36,1),box-shadow .35s;
+}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.svc-head{
+  display:flex;align-items:center;gap:16px;
+  padding:24px 26px 0;
+}
+.svc-num{
+  font-family:var(--serif);font-size:13px;color:var(--copper);
+  letter-spacing:.1em;writing-mode:horizontal-tb;
+}
+.svc-icon{
+  width:58px;height:58px;border-radius:14px;flex-shrink:0;
+  background:linear-gradient(145deg,var(--navy),var(--navy-3));
+  display:grid;place-items:center;
+  position:relative;overflow:hidden;
+}
+.svc-icon::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,200,69,.35) 50%,transparent 70%);
+  transform:translateX(-110%);
+}
+.svc-card:hover .svc-icon::after{animation:shine .9s ease forwards}
+@keyframes shine{to{transform:translateX(110%)}}
+.svc-icon svg{width:28px;height:28px;fill:var(--amber)}
+.svc-title{font-family:var(--serif);font-size:20px;font-weight:600;color:var(--navy);letter-spacing:.06em;line-height:1.4}
+.svc-body{padding:18px 26px 24px;flex:1;display:flex;flex-direction:column}
+.svc-desc{font-size:14px;color:var(--ink-soft);line-height:1.95;flex:1}
+.svc-more{
+  margin-top:20px;align-self:flex-start;
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13.5px;font-weight:700;color:var(--copper);letter-spacing:.08em;
+  background:none;border:0;cursor:pointer;font-family:var(--sans);
+  padding:4px 0;border-bottom:2px solid rgba(194,117,42,.25);
+  transition:.3s;
+}
+.svc-more:hover{border-color:var(--copper)}
+.svc-more .pm{
+  width:18px;height:18px;border-radius:50%;background:var(--copper);
+  position:relative;flex-shrink:0;transition:transform .35s;
+}
+.svc-more .pm::before,.svc-more .pm::after{
+  content:"";position:absolute;background:#fff;top:50%;left:50%;transform:translate(-50%,-50%);
+}
+.svc-more .pm::before{width:8px;height:2px}
+.svc-more .pm::after{width:2px;height:8px;transition:.3s}
+.svc-card.open .svc-more .pm{transform:rotate(180deg)}
+.svc-card.open .svc-more .pm::after{opacity:0}
+
+/* 詳細(アコーディオン) */
+.svc-detail{max-height:0;overflow:hidden;transition:max-height .65s cubic-bezier(.4,0,.2,1)}
+.svc-detail-in{padding:8px 26px 32px;border-top:1px dashed var(--line);margin:0 0}
+.svc-detail h4{
+  font-family:var(--serif);font-size:17px;color:var(--navy);
+  margin:28px 0 12px;padding-left:14px;position:relative;letter-spacing:.05em;
+}
+.svc-detail h4::before{
+  content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;
+  background:linear-gradient(180deg,var(--amber),var(--copper));border-radius:2px;
+}
+.svc-detail h5{
+  font-size:14.5px;font-weight:700;color:var(--copper);
+  margin:20px 0 6px;letter-spacing:.04em;
+}
+.svc-detail p{font-size:14px;color:var(--ink);line-height:2;margin-bottom:8px}
+.svc-detail ul.dotlist{margin:6px 0 10px}
+.svc-detail ul.dotlist li{
+  font-size:14px;padding-left:18px;position:relative;line-height:2;
+}
+.svc-detail ul.dotlist li::before{
+  content:"";position:absolute;left:2px;top:13px;width:6px;height:6px;border-radius:50%;background:var(--copper);
+}
+.dtable{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0 6px}
+.dtable th,.dtable td{border:1px solid var(--line);padding:9px 12px;text-align:left;line-height:1.6}
+.dtable th{background:#f0eee7;font-weight:700;color:var(--navy);white-space:nowrap}
+.dtable td.idx{text-align:center;white-space:nowrap;font-weight:700;color:var(--copper)}
+
+/* ===== 選ばれる理由(地域密着) ===== */
+.local{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.local::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 85% 15%,rgba(255,200,69,.08),transparent 45%),
+    radial-gradient(circle at 10% 90%,rgba(194,117,42,.12),transparent 50%);
+}
+.local .wrap{position:relative;z-index:1}
+.local .sec-title{color:#fff}
+.local .sec-lead{color:rgba(255,255,255,.78)}
+.local-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.local-card{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius);padding:34px 28px;
+  transition:transform .35s,border-color .35s,background .35s;
+}
+.local-card:hover{transform:translateY(-5px);border-color:rgba(255,200,69,.5);background:rgba(255,255,255,.08)}
+.local-card .lc-num{font-family:var(--serif);font-size:14px;color:var(--amber);letter-spacing:.15em}
+.local-card h3{font-family:var(--serif);font-size:20px;margin:12px 0 14px;letter-spacing:.06em;font-weight:600}
+.local-card p{font-size:13.5px;color:rgba(255,255,255,.78);line-height:2}
+
+/* ===== 会社概要 ===== */
+.company{background:var(--white)}
+.company-flex{margin-top:50px;display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:start}
+.ctable{width:100%;border-collapse:collapse}
+.ctable th,.ctable td{
+  padding:18px 8px;border-bottom:1px solid var(--line);
+  font-size:14.5px;text-align:left;vertical-align:top;line-height:1.8;
+}
+.ctable th{width:130px;color:var(--navy);font-weight:700;letter-spacing:.06em;white-space:nowrap}
+.ctable tr:first-child th,.ctable tr:first-child td{border-top:2px solid var(--navy)}
+.ctable a.tel-link{color:var(--copper);font-weight:700;border-bottom:1px solid rgba(194,117,42,.35)}
+.map-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px;display:flex;flex-direction:column;gap:18px;
+}
+.map-visual{
+  border-radius:10px;overflow:hidden;background:linear-gradient(145deg,var(--navy),var(--navy-3));
+  aspect-ratio:4/3;display:grid;place-items:center;position:relative;
+}
+.map-visual svg.pinmap{width:100%;height:100%}
+.map-card .addr{font-size:14px;line-height:1.9}
+.map-card .addr strong{font-family:var(--serif);color:var(--navy);font-size:16px;display:block;margin-bottom:4px}
+.map-btn{
+  align-self:flex-start;display:inline-flex;align-items:center;gap:8px;
+  background:var(--navy);color:#fff;font-size:13.5px;font-weight:700;letter-spacing:.06em;
+  padding:12px 24px;border-radius:50px;transition:.3s;
+}
+.map-btn:hover{background:var(--navy-3);transform:translateY(-2px)}
+.map-btn svg{width:15px;height:15px;fill:#fff}
+
+/* ===== お問い合わせ ===== */
+.contact{
+  background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 70%,var(--navy-3) 100%);
+  color:#fff;text-align:center;position:relative;overflow:hidden;
+}
+.contact::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(255,200,69,.12),transparent 55%);
+}
+.contact .wrap{position:relative;z-index:1}
+.contact .sec-title{color:#fff}
+.contact .eyebrow{justify-content:center;color:var(--amber)}
+.contact .eyebrow::before{background:var(--amber)}
+.contact-lead{margin:22px auto 0;color:rgba(255,255,255,.85);max-width:560px;font-size:15px;line-height:2.1}
+.big-tel{
+  margin:42px auto 0;max-width:560px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;padding:40px 30px;
+  backdrop-filter:blur(8px);
+  transition:transform .3s,border-color .3s;
+}
+.big-tel:hover{transform:translateY(-4px);border-color:var(--amber)}
+.big-tel .bt-label{font-size:13px;letter-spacing:.2em;color:var(--amber);font-weight:700}
+.big-tel a.bt-num{
+  display:inline-flex;align-items:center;gap:14px;
+  font-size:clamp(32px,6vw,46px);font-weight:700;letter-spacing:.03em;color:#fff;
+  margin-top:10px;line-height:1.3;
+}
+.big-tel a.bt-num svg{width:34px;height:34px;fill:var(--amber);flex-shrink:0}
+.big-tel .bt-note{margin-top:14px;font-size:13.5px;color:rgba(255,255,255,.75);line-height:1.9}
+
+/* ===== フッター ===== */
+footer{background:#091a27;color:rgba(255,255,255,.8);padding:64px 0 0}
+.foot-grid{
+  max-width:1120px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:44px;
+}
+.foot-co .f-logo{font-family:var(--serif);font-size:21px;color:#fff;font-weight:700;letter-spacing:.08em}
+.foot-co p{font-size:13px;margin-top:14px;line-height:2}
+.foot-co .f-tel{color:var(--amber);font-weight:700;font-size:17px}
+.foot-h{font-size:13px;letter-spacing:.16em;color:var(--amber);font-weight:700;margin-bottom:18px}
+.foot-list li{margin-bottom:10px}
+.foot-list a{font-size:13.5px;color:rgba(255,255,255,.78);transition:.25s;display:inline-flex;align-items:center;gap:8px}
+.foot-list a::before{content:"";width:10px;height:1px;background:var(--copper-light);transition:width .25s}
+.foot-list a:hover{color:#fff}
+.foot-list a:hover::before{width:18px}
+.copyright{
+  margin-top:54px;border-top:1px solid rgba(255,255,255,.1);
+  padding:22px 24px;text-align:center;font-size:12px;color:rgba(255,255,255,.5);letter-spacing:.06em;
+}
+
+/* ===== モバイル固定電話バー ===== */
+.sp-telbar{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:rgba(9,26,39,.95);backdrop-filter:blur(8px);
+  box-shadow:0 -4px 20px rgba(0,0,0,.3);
+}
+.sp-telbar a{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,var(--copper),var(--copper-light));
+  color:#fff;font-weight:700;font-size:17px;letter-spacing:.04em;
+  border-radius:12px;padding:14px;
+}
+.sp-telbar a svg{width:19px;height:19px;fill:#fff}
+.sp-telbar .small{font-size:11px;font-weight:500;opacity:.9}
+
+/* ページトップ */
+.totop{
+  position:fixed;right:22px;bottom:26px;z-index:80;
+  width:48px;height:48px;border-radius:50%;
+  background:var(--navy);color:#fff;border:1px solid rgba(255,255,255,.2);
+  display:grid;place-items:center;cursor:pointer;
+  opacity:0;visibility:hidden;transition:.35s;
+  box-shadow:0 6px 18px rgba(13,35,52,.35);
+}
+.totop.show{opacity:1;visibility:visible}
+.totop:hover{background:var(--navy-3);transform:translateY(-3px)}
+.totop svg{width:16px;height:16px;fill:#fff}
+
+/* ===== レスポンシブ ===== */
+@media (max-width:980px){
+  .trust-grid{grid-template-columns:1fr;gap:18px;padding:28px 24px}
+  .trust-item{justify-content:flex-start}
+  .local-grid{grid-template-columns:1fr}
+  .company-flex{grid-template-columns:1fr;gap:36px}
+  .foot-grid{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:860px){
+  nav.gnav{display:none}
+  .menu-btn{display:block}
+  section{padding:72px 0}
+  .sp-telbar{display:block}
+  .totop{bottom:96px;right:16px}
+  footer{padding-bottom:70px}
+}
+@media (max-width:520px){
+  body{font-size:14.5px}
+  .hero{padding:110px 0 90px}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .tel-card{justify-content:center}
+  .svc-grid{grid-template-columns:1fr}
+  .ctable th{width:104px}
+  .header-inner{height:64px}
+  html{scroll-padding-top:72px}
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.hero-load .hl{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+
+<!-- ============ ヘッダー ============ -->
+<header id="header">
+  <div class="header-inner">
+    <a href="#top" class="logo">
+      <span class="co">株式会社アキヒサ電機</span>
+      <span class="sub">千葉県千葉市中央区の電気工事会社</span>
+    </a>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <a href="#services">電気工事</a>
+      <a href="#local">選ばれる理由</a>
+      <a href="#company">会社概要</a>
+      <a href="tel:043-266-1576" class="head-tel">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        <span class="num">043-266-1576</span>
+      </a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- スマホ用ナビ -->
+<div class="sp-nav" id="spNav">
+  <a href="#services">電気工事</a>
+  <a href="#local">選ばれる理由</a>
+  <a href="#company">会社概要</a>
+  <a href="#contact">お問い合わせ</a>
+  <a href="tel:043-266-1576" class="sp-tel">📞 043-266-1576</a>
+</div>
+
+<!-- ============ ヒーロー ============ -->
+<section class="hero" id="top">
+  <svg class="hero-circuit" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <path id="c1" d="M-50,150 H300 L380,230 H700 L780,150 H1250"/>
+    <path id="c2" d="M-50,420 H200 L280,500 H560 L640,420 H900 L980,500 H1250"/>
+    <path id="c3" d="M-50,650 H420 L500,570 H820 L900,650 H1250"/>
+    <path d="M380,230 V420 M640,420 V570 M780,150 V90 M280,500 V650"/>
+    <circle class="node" cx="380" cy="230" r="4"/><circle class="node" cx="700" cy="230" r="4"/>
+    <circle class="node" cx="280" cy="500" r="4"/><circle class="node" cx="640" cy="420" r="4"/>
+    <circle class="node" cx="500" cy="570" r="4"/><circle class="node" cx="900" cy="650" r="4"/>
+    <circle class="pulse-dot" r="4"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#c1"/></animateMotion></circle>
+    <circle class="pulse-dot" r="4"><animateMotion dur="9s" begin="1.5s" repeatCount="indefinite"><mpath href="#c2"/></animateMotion></circle>
+    <circle class="pulse-dot" r="4"><animateMotion dur="8s" begin="3s" repeatCount="indefinite"><mpath href="#c3"/></animateMotion></circle>
+  </svg>
+
+  <div class="hero-inner hero-load">
+    <div class="hl"><span class="hero-eyebrow">千葉県千葉市中央区|電気工事会社</span></div>
+    <h1 class="hl">地域の「あかり」と「安全」を、<br>確かな技術で<span class="accent">支える</span>。</h1>
+    <p class="hero-sub hl">コンセント工事から照明設備・引込線・交通信号設備・避雷針・電気防食工事まで。<br>株式会社アキヒサ電機は、千葉の暮らしと街のインフラを支える電気工事の専門会社です。</p>
+    <div class="hero-cta hl">
+      <a class="tel-card" href="tel:043-266-1576">
+        <span class="icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+        <span>
+          <span class="label">お問い合わせをお待ちしております</span>
+          <span class="num">043-266-1576</span>
+        </span>
+      </a>
+      <a class="btn-ghost" href="#services">対応工事を見る
+        <svg viewBox="0 0 24 24"><path d="M8.6 16.6 13.2 12 8.6 7.4 10 6l6 6-6 6z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="scroll-sign">SCROLL</div>
+</section>
+
+<!-- ============ 信頼バー ============ -->
+<div class="trust">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <span class="t-icon"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/></svg></span>
+      <span class="t-txt"><strong>建設業許可取得</strong>千葉県知事許可 第050090号</span>
+    </div>
+    <div class="trust-item">
+      <span class="t-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
+      <span class="t-txt"><strong>千葉の地域密着</strong>千葉市中央区川戸町から迅速対応</span>
+    </div>
+    <div class="trust-item">
+      <span class="t-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4.9 12.8c-.3.4 0 1 .5 1h4.2L8 22l8.1-10.8c.3-.4 0-1-.5-1h-4.2L13 2z"/></svg></span>
+      <span class="t-txt"><strong>幅広い電気工事に対応</strong>住宅設備からインフラ設備まで</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 事業内容 ============ -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">SERVICE</span>
+      <h2 class="sec-title">電気工事|主な対応工事</h2>
+      <p class="sec-lead">株式会社アキヒサ電機が対応する電気工事の一覧です。各工事の「詳しく見る」から、種類・工程・注意点などの詳細をご覧いただけます。</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <!-- 1 コンセント工事 -->
+      <article class="svc-card reveal" data-delay="1">
+        <div class="svc-head">
+          <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M16 7V3h-2v4h-4V3H8v4H7a2 2 0 0 0-2 2v4a5 5 0 0 0 4 4.9V21h2v-3.1A5 5 0 0 0 15 13V9h2a2 2 0 0 0-1-2z M15 13a3 3 0 0 1-6 0V9h6v4z"/></svg></div>
+          <div>
+            <div class="svc-num">SERVICE 01</div>
+            <h3 class="svc-title">コンセント工事</h3>
+          </div>
+        </div>
+        <div class="svc-body">
+          <p class="svc-desc">コンセント工事とは、住宅などにコンセントを設置する工事のことです。とくに新しくコンセントを設置する場合などは配線工事も必要となります。いずれにせよ、電気工事の一種なので工事中にある程度の危険も伴うこともあり、施工するには資格が必要です。</p>
+          <button class="svc-more" aria-expanded="false">詳しく見る <span class="pm"></span></button>
+        </div>
+        <div class="svc-detail">
+          <div class="svc-detail-in">
+            <p>コンセント工事とは、住宅などにコンセントを設置する電気工事のことです。施工するには電気工事士の資格が必要となります。コンセントを設置するにあたっては、何を目的にどのような場所に作るのかにより正しい方法を用いることが大事です。</p>
+
+            <h4>コンセント工事の種類</h4>
+            <p>コンセント工事は大きくわけて「コンセントを新しく増設する」「差込口だけを増設する」「コンセントボルト数を変更する」という3種類があります。それぞれの注意点などは以下の通りです。</p>
+            <h5>コンセントを新しく増設する</h5>
+            <p>コンセントがない場所に新しくコンセントを作る電気工事です。コンセントの使用目的、間取りなどによって、必要な工事時間やコストが違ってきます。また、分電盤から配線を新しく引くのか、すでにあるコンセントから配線するかも選択しなければいけません。</p>
+            <h5>差込口だけを増設する</h5>
+            <p>コンセントはあるものの差込口が足りず、タコ足配線になっているのを解消するために行う電気工事です。一般的には30分ほどで終了する簡単な工事ですが、消費電力を大きくするなど、新しく配線を引く必要がある時にはコストがかかることもあります。</p>
+            <h5>コンセントボルト数を変更する</h5>
+            <p>コンセントボルトは基本的には分電盤で変更できます。しかし、古い分電盤を取り替える工事が必要になるケースもあります。</p>
+
+            <h4>コンセント工事の注意点</h4>
+            <p>コンセント工事にはある種のリスクもあります。そのため、電気工事士の資格がなければできません。コンセント工事に伴う危険には次のようなものがあります。</p>
+            <h5>感電事故</h5>
+            <p>ブレーカーを下げないままで工事を行うと、ショートして感電する恐れがあります。</p>
+            <h5>転落事故</h5>
+            <p>コンセントは高い位置にあることもめずらしくありません。転落事故を起こさないように、脚立などを整備し足場をしっかりと確保しなくてはいけません。</p>
+            <h5>漏電事故</h5>
+            <p>電気配線をしっかりと行わないと、漏電による火災を引き起こす危険があります。電線、配線がむき出しになっていたり、水に触れる場所にあると、漏電やショートの危険が高まるので十分な配慮が必要です。</p>
+
+            <h4>コンセント工事の要となる配線工事</h4>
+            <p>コンセント工事では配線工事が大事です。配線では主に次のような選択をしなければいけません。</p>
+            <h5>壁の中に配線を引く・壁の外に配線を引く</h5>
+            <p>壁の中に配線を通す方法は、配線そのものは見えないので、見た目がスッキリとしているというメリットがあります。しかし、配線がつながるような場所にコンセントを設置しなければいけないなどの制約があります。一方、断熱材を使用している壁などは、壁の中に配線を通すことはできません。そのため、床や天井に露出した形で配線を引かなければいけないこともあります。工事が簡単というメリットはありますが、見た目が悪くなるという点はデメリットといえるでしょう。</p>
+            <h5>既存の配線から延長する・分電盤から新しく配線する</h5>
+            <p>コンセントで使用する消費電力が少ないならば、すでにあるコンセントの配線から延長するだけで十分です。しかし、消費電力が大きいならば、新規コンセント専用の配線を分電盤から新たに引かなければいけません。配線方法を決めるためにも、工事前に使用目的を明確にしておく必要があります。</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 照明設備工事 -->
+      <article class="svc-card reveal" data-delay="2">
+        <div class="svc-head">
+          <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V18h6v-1.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2zM9 20a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg></div>
+          <div>
+            <div class="svc-num">SERVICE 02</div>
+            <h3 class="svc-title">照明設備工事</h3>
+          </div>
+        </div>
+        <div class="svc-body">
+          <p class="svc-desc">照明設備工事とは、照明器具を設置する電気工事のことです。依頼者の要望、建物の形状、他の設備とのかねあいを配慮して、適切な照明器具を設置するようにしなければいけません。新築住宅の他、店舗の改修工事などでも行われます。</p>
+          <button class="svc-more" aria-expanded="false">詳しく見る <span class="pm"></span></button>
+        </div>
+        <div class="svc-detail">
+          <div class="svc-detail-in">
+            <p>照明設備工事とは、依頼者の要望、建物の形状、他の設備とのかねあいなどを考慮しながら、適切な照明器具を設置する電気工事のことです。照明器具はもちろんのこと、分電盤の設置、配線、照明器具を制御する点滅器・調光器などの設置が必要になることもあります。</p>
+
+            <h4>照明設備工事の種類</h4>
+            <p>照明設備工事には以下のようなものがあります。</p>
+            <h5>新築物件の照明設備工事</h5>
+            <p>新築物件に照明設備を取り付ける際には、分電盤の設置や配線も新たに行わなければいけません。場合によっては、電源と照明器具の間に点滅器、調光器なども取り付けます。</p>
+            <h5>改修工事などに伴う照明設備交換</h5>
+            <p>店舗、オフィスなどでこれまで使用されていた白熱灯、蛍光灯、水銀灯などをLED照明器具設備に交換する工事です。電気料金節約はもちろん、雰囲気のある空間作りを目的として行われる場合もあります。</p>
+
+            <h4>照明設備工事の工程</h4>
+            <p>新築住宅に照明設備を設置する場合、次のような工程になります。</p>
+            <h5>分電盤の設置</h5>
+            <p>分電盤とは漏電ブレーカーや配線用ブレーカーなどを一つにまとめた機器のことです。新築物件だけではなく、改修工事でも古い分電盤を新しい物に取り替えることもあります。</p>
+            <h5>配線</h5>
+            <p>分電盤から照明器具、スイッチまで配線を行います。通常は壁の中を通す形になりますが、断熱材を使用している壁などは壁をとせないこともあります。</p>
+            <h5>スイッチの取り付け</h5>
+            <p>照明器具のスイッチを取り付けます。</p>
+            <h5>調光器の取り付け</h5>
+            <p>調光器とは調光スイッチとも呼ばれ、照明器具と電源の間に設置される器具です。一般家庭ではリビング、寝室など時間帯によって光の量を調節することが多い部屋でよく用いられます。調光して照度を下げる時間を作れば、消費電力もダウンし省エネにつながります。</p>
+            <h5>点滅器の取り付け</h5>
+            <p>周囲の明るさによる照明器具の点灯・消灯を、自動的に行うための器具です。たとえば、点滅器を使用すれば照明器具を夜間だけ自動的に点灯するということができるのです。防犯目的で使用されることもあります。</p>
+            <h5>照明器具の取り付け</h5>
+            <p>配電盤の設置、配線、スイッチ・調光器・点滅器などの取り付けの後、照明器具を取り付けて完成です。</p>
+
+            <h4>LED照明器具に交換するメリット</h4>
+            <p>照明設備工事の中でも少なくないのがLED照明器具への交換です。改修工事のときに行われることも少なくありませんが、LED照明器具に取り替えることだけを目的に行われるケースもあります。なぜならば、次のような様々なメリットがあるからです。</p>
+            <h5>電気代節約</h5>
+            <p>従来の照明器具をLED照明に変えると、電力使用量を1/5程度に節約できるといわれています。また、LED照明器具は寿命が長いので、交換する手間も軽減されます。店舗の照明器具設置に関するメンテナンス費用を節約することもできるでしょう。</p>
+            <h5>演出効果</h5>
+            <p>様々な色のLED照明を利用すれば、店内照明で多彩なムードを演出することも可能です。店舗のイメージ作りとして活用されている例も少なくありません。しかし、たとえば飲食店の店内照明などは、料理が美味しく見えることを第一にしなくてはいけません。また、衣料品店では衣服の模様などがはっきりと見えないようではトラブルの原因にもなります。雰囲気作りはもちろんのこと、商品を魅力的に見せる配慮も必要となってくるでしょう。</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 ネオン設備工事 -->
+      <article class="svc-card reveal" data-delay="3">
+        <div class="svc-head">
+          <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4zm2 3h2.2l2 4.2V8h1.8v8h-2.1l-2.1-4.4V16H6V8zm8 0h4v1.7h-2.2v1.4h2v1.7h-2v1.5H18V16h-4V8z"/></svg></div>
+          <div>
+            <div class="svc-num">SERVICE 03</div>
+            <h3 class="svc-title">ネオン設備工事</h3>
+          </div>
+        </div>
+        <div class="svc-body">
+          <p class="svc-desc">ネオン設備工事とは、ネオン管を点灯するネオン管灯設備、ネオン変圧器、点滅装置などから構成されるネオンサイン設置する工事のことです。電気工作物に係る法令の規定基づいて工事が行われ、施工するには資格が必要となります。</p>
+          <button class="svc-more" aria-expanded="false">詳しく見る <span class="pm"></span></button>
+        </div>
+        <div class="svc-detail">
+          <div class="svc-detail-in">
+            <p>ネオン管などのガス放電管を使用して、様々な色の光を点灯させる装置をネオンサインといいます。主に看板や広告に使用されていますが、このネオンサイン設備を取り付ける工事のことをネオンサイン工事といいます。電気工事士法に基づいて施工され、特殊電気工事資格者などの資格が必要となります。</p>
+
+            <h4>ネオン設備工事の工程</h4>
+            <p>ネオン設備工事にはビルの屋上に大きなネオンサインを取り付けるものもあります。その場合には大がかりな装置工事も必要になります。しかし、今回は小規模店舗の軒先などに設置される、比較的小さなネオンサインの工程について解説します。</p>
+            <h5>チャンネル文字とネオン管灯の取り付け</h5>
+            <p>設計図に基づき、ネオン管灯とチャンネル文字を壁面に取り付けていきます。</p>
+            <h5>1次側配線工事</h5>
+            <p>分電盤からネオン変圧器までの配線を行います。</p>
+            <h5>2次側配線工事</h5>
+            <p>ネオン変圧器の隣、完成後も点検などが容易に行えるように配慮しなければいけません。また、2次側配線は高い電圧がかかるので、周囲と一定距離を保つことが必要になります。配線が終わったら、ネオン変圧器を引出線が下向きになるように固定します。</p>
+
+            <h4>ネオン設備工事に必要な資格</h4>
+            <p>以上のようにネオン設備工事では、2次側配線工事という電気工事が中心となります。そのため、特殊電気工事資格者という専門的な資格が必要です。</p>
+            <h5>特殊電気工事資格者とは</h5>
+            <p>電気工事士の中でネオンサインの設置に関する5年以上の実務経験があり、経済産業大臣の定めるネオン工事資格者認定講習の過程を修了すると、特殊電気工事資格者の資格を得ることができます。または、公益社団法人日本ネオンサイン協会による「ネオン工事実技者試験」に合格し「ネオン工事技術者証」の交付を受けます。または同協会が実施しているネオン工事技術者試験の合格者も特殊電気工事資格者として認められます。</p>
+
+            <h4>ネオン設備工事の注意点</h4>
+            <p>ネオン設備工事では次のような注意が必要です。</p>
+            <h5>ネオン管灯と回路</h5>
+            <p>ネオン管灯は人が触れる恐れのないように設置します。強風等で脱落しないようにしっかりと固定しなくてはいけません。</p>
+            <h5>ネオン変圧器</h5>
+            <p>ネオン変圧器も人が触れる恐れのない場所に、強風等で脱落しないような位置に固定しますが、なおかつ保守点検しやすいようにしなければいけません。さらに、地上または屋上から1.8m以上離れて設置する必要があります。どうしても1.8m以下になってしまう時は、人が触れないように金網などで保護します。木造建築では漏電防止のための絶縁物も必要です。</p>
+            <h5>点滅装置</h5>
+            <p>保守点検が簡単で、なおかつ人が触れない場所に設置します。ネオン管灯などの低圧側に取り付けるようにしなければいけません。</p>
+            <h5>避雷針</h5>
+            <p>地上20mよりも高い場所に設置するネオン設備には避雷針が必要です。</p>
+            <h5>配線</h5>
+            <p>ネオン設備工事の配線は電気工作物に係る法令の規定によります。その他、複数のネオン変圧器がある場合には、2次側配線同士を接続しないなど、安全面に十分配慮するようにしなければいけません。</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 引込線工事 -->
+      <article class="svc-card reveal" data-delay="1">
+        <div class="svc-head">
+          <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M11 2h2v3h3l-4 5h3l-6 7 1.5-5H8l1.5-5H7l4-5zM5 18h14v2H5z"/></svg></div>
+          <div>
+            <div class="svc-num">SERVICE 04</div>
+            <h3 class="svc-title">引込線工事</h3>
+          </div>
+        </div>
+        <div class="svc-body">
+          <p class="svc-desc">電気は電柱から引込線によって各家庭に送られています。この引込線、引込線取付点、メーターなどを経て分電盤に配線する電気工事のことを引込線工事といいます。この引込線工事が完了して初めて、電気を使用できるようになるのです。</p>
+          <button class="svc-more" aria-expanded="false">詳しく見る <span class="pm"></span></button>
+        </div>
+        <div class="svc-detail">
+          <div class="svc-detail-in">
+            <p>電柱から各家庭に電力を送るための引込線を取り付ける電気工事を引込線工事といいます。まずは電柱上で配電線から分岐することから始まり、家の中で問題なく電気を使用できるようにするため、なくてはならない工事です。</p>
+
+            <h4>引込線工事の工程</h4>
+            <p>引込線工事の平均的な工程は次の通りです。</p>
+            <h5>電力会社への契約申し込み</h5>
+            <p>引込線工事をするには、まず、そのエリアの電力会社に契約を申し込まなくてはいけません。3週間ぐらいから受け付けてもらえますが、それ以前でも応相談となります。引込線工事の多くは電力会社の指定電気工事店によって行われています。</p>
+            <h5>配電線から分岐線を引く</h5>
+            <p>配電線を電柱上で分岐して、引込線を引きます。空中を架け渡す架空引込線が一般的ですが、地中引込線などもあります。引込線は、家の軒下などにある引込線取付点に接続されます。</p>
+            <h5>メーターの取り付け</h5>
+            <p>メーターを台座などに取り付け、引込線取付点から伸ばした配線をメーターと接続します。この時、合成樹脂管などにより納めて配線されます。</p>
+            <h5>メーターから分電盤までの配線</h5>
+            <p>メーターの台座の裏から屋内に配線して分電盤と接続します。</p>
+            <h5>アンペアブレーカーの取り付け</h5>
+            <p>分電盤にアンペアブレーカーを取り付けます。一般家庭では当面は30A契約となることがほとんどです。</p>
+            <h5>竣工検査</h5>
+            <p>検査後、電力の使用を開始します。</p>
+
+            <h4>引込線工事の注意点</h4>
+            <p>引込線工事は以下のような注意が必要となります。</p>
+            <h5>架空引込線の安全性</h5>
+            <p>空中を架け渡す架空引込線は、張力により断線が起きないように留意しなければいけません。そのため、電柱と建物の間に支持線を張るなどの工夫が必要です。また、支持線は両端に引留めがいしを取り付けて絶縁するようにします。がいしとは、電線と支持物を絶縁するための器具のことです。</p>
+            <h5>メーターの設置場所</h5>
+            <p>メーターは検針のしやすさに配慮して地上から0.8~1.8mの高さに取り付けなければいけません。また、メーターの配線は電源側が左側、負荷側が右側と決められています。さらには、電力会社ごとに細かいルールがあるので、事前に資料をしっかりとチェックする必要があります。</p>
+            <h5>引込線の高さ</h5>
+            <p>引込線は原則として家屋の壁の地上から4m以上高い場所に取り付けを行います。ただし、構造上やむを得ない事情があり、交通などに支障がないならば2.5m以上でも許されます。</p>
+            <h5>補助支持物の利用</h5>
+            <p>住宅事情によって引込線が長くならざるを得ないケースもあります。このような場合、補助支持物を設置することで美観をでることも可能です。補助支持物とは、たとえばコンクリート小柱、鉄管小柱、複合鋼管小柱のようなものです。小柱を経由して家屋に引込線を配線することにより、引込線の混線などを防止します。</p>
+            <h5>引込線のサイズ</h5>
+            <p>家電の中でも照明器具、冷蔵庫などは100V、IHクッキングヒーターやエアコンは200Vを利用しています。そのため、引込線は単相3線式という3本の電線で100V、200V両方に対応できるものを使用するのが一般的です。よく利用されるのが3芯のCVケーブルですが、契約容量によって太さが異なってきます。60A以下の契約ならば14スケと呼ばれる直径4.2mmほどのケーブルが使用されます。</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 交通信号設備工事 -->
+      <article class="svc-card reveal" data-delay="2">
+        <div class="svc-head">
+          <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M9 2h6a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm3 4.2A1.8 1.8 0 1 0 12 9.8 1.8 1.8 0 0 0 12 6.2zm0 4.9a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zm0 4.9a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zM16 5h3l2 2-2 2h-3V5zM8 11H5l-2 2 2 2h3v-4z"/></svg></div>
+          <div>
+            <div class="svc-num">SERVICE 05</div>
+            <h3 class="svc-title">交通信号設備工事</h3>
+          </div>
+        </div>
+        <div class="svc-body">
+          <p class="svc-desc">交通信号設備工事とは、道路上に交通信号機を新設したり、交換、移設などを行う電気工事のことです。交通、電気、通信、情報、土木、建築などの幅広い知識と技術を必要とします。そのため、交通信号工事士という認定資格もあります。</p>
+          <button class="svc-more" aria-expanded="false">詳しく見る <span class="pm"></span></button>
+        </div>
+        <div class="svc-detail">
+          <div class="svc-detail-in">
+            <p>交通信号設備工事とは、交通信号機を設置する電気工事のことです。交通工学に関する知識、電気、通信、土木などの確かな技術が求められます。そのような高度な工事が可能であることを認定する交通信号工事士という資格もあります。</p>
+
+            <h4>交通信号設備工事の工程</h4>
+            <p>交通信号設備工事は警察による発注があってスタートします。その工程は以下の通りです。</p>
+            <h5>信号機柱を建柱</h5>
+            <p>コンクリート柱または各種鋼管による信号機柱を建柱します。</p>
+            <h5>灯器取り付け</h5>
+            <p>交通信号機の本体の部分を灯器といいます。大きく分けて車両用灯器と歩行者用灯器の2種類があります。それぞれ、アームと呼ばれる鉄管で信号機柱に設置されます。</p>
+            <h5>制御器設置</h5>
+            <p>交通信号機をコントロールする制御器を設置します。最近の制御器はパソコンと接続して制御の変更を行ったり、メンテナンスができるようになっているものも少なくありません。動作設定を行うまでが交通信号設備工事です。</p>
+
+            <h4>車両用灯器の仕組み</h4>
+            <p>交通信号設備工事の中でも多いのが車両用灯器の取り付けです。車両用灯器の仕組みについて詳しく見てみましょう。</p>
+            <h5>フード</h5>
+            <p>レンズ部分が汚れたり、日差しによって点滅が不明瞭になるのを防ぎます。</p>
+            <h5>LEDユニット</h5>
+            <p>最近の灯器はLEDが主流です。LEDユニットはLED素子を並べるための基盤部分で、日光が当たっても反射が起きないように表面が加工されています。</p>
+            <h5>LED素子</h5>
+            <p>LEDユニットにはLED素子、すなわちLED電球が並べられます。どの色を使用するかは規格で決められています。</p>
+            <h5>サビ止め金具</h5>
+            <p>各LEDユニットの下にはサビ止め金具が設置されています。ここを開けることでLEDユニットの交換ができるようになっています。</p>
+            <h5>灯器固定金具</h5>
+            <p>灯器をアームに設置する専用金具です。ここで灯器の角度を調節します。</p>
+
+            <h4>交通信号工事士とは</h4>
+            <p>交通信号工事士とは、交通信号設備に従事する人材の育成、専門能力の向上などを目的としている一般社団法人全国交通信号工事技術普及協会による認定資格です。</p>
+            <h5>第2種交通信号工事士</h5>
+            <p>交通信号施設や工事に関する基礎的な専門知識と技能があり、交通信号設備工事に関する電気工事ができることを認定する資格です。受験資格は特にありません。</p>
+            <h5>第1種交通信号工事士</h5>
+            <p>交通信号施設工事に関する豊富な実務経験があり、高度な専門知識を持って交通信号設備工事を指導する能力があることを認定する資格です。第2種交通信号工事士資格を取得して5年以上経過していることが受験資格になります。</p>
+            <h5>交通信号工事士に求められる知識</h5>
+            <p>交通信号工事士に求められる知識には次のようなものがあります。</p>
+            <ul class="dotlist">
+              <li>交通信号設備工事に必要な専門知識</li>
+              <li>交通信号設備工事に関する設計、施工、機器、工事品質などに関する技術についての知識</li>
+              <li>関係法令</li>
+              <li>交通工学(交通信号制御技術)</li>
+              <li>交通信号設備に関する知識</li>
+            </ul>
+            <h5>交通信号工事士に求められる技能</h5>
+            <p>交通信号工事士に求められる技能は次の通りです。</p>
+            <ul class="dotlist">
+              <li>交通信号設備の設計に関する業務</li>
+              <li>交通信号設備工事の電気工事に関する業務</li>
+              <li>交通信号設備工事の通信工事に関する業務</li>
+              <li>交通信号設備工事の土木工事に関する業務</li>
+              <li>交通信号設備の製造に関する業務</li>
+              <li>交通信号設備の材料に関する業務</li>
+              <li>交通信号設備の保守に関する業務</li>
+              <li>交通信号設備の安全管理に関する業務</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 避雷針工事 -->
+      <article class="svc-card reveal" data-delay="3">
+        <div class="svc-head">
+          <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2v4m0 0-2.5 8h3L11 22l5.5-9h-3L15 6h-3zM12 6h3"/><path d="M13 2 9 12h3.2L10 22l7-12h-3.5L17 2h-4z"/></svg></div>
+          <div>
+            <div class="svc-num">SERVICE 06</div>
+            <h3 class="svc-title">避雷針工事</h3>
+          </div>
+        </div>
+        <div class="svc-body">
+          <p class="svc-desc">避雷針工事とは避雷針を設置する電気工事のことです。建築基準法では高さが20mを超える建物には避雷針を取り付けられることが義務付けられています。しかし、それより低い一戸建て住宅でも避雷針があった方が良い場合もあります。</p>
+          <button class="svc-more" aria-expanded="false">詳しく見る <span class="pm"></span></button>
+        </div>
+        <div class="svc-detail">
+          <div class="svc-detail-in">
+            <p>避雷針工事は避雷針を取り付ける電気工事のことです。建築基準法に照らし合わせても5階未満の住宅ならば設置義務はまず発生しません。また、周囲に高層ビルやマンションがあれば、一戸建てには落雷のリスクはほとんどないといわれています。しかし、高台や周囲に高い建物がまったくない開けた場所に建っている場合には、一戸建てにも避雷針を付けた方が良い場合もあります。</p>
+
+            <h4>避雷針とは</h4>
+            <p>避雷針とは建物を落雷から保護するための仕組みのことです。地面と地中の電位差を少なくして落雷のリスクを軽減し、落雷の際には電流を地面に流すことで建物への被害を防いでいます。保護対象となる建物の先端に取り付けられる棒状の導体です。</p>
+
+            <h4>避雷針工事の重要性</h4>
+            <p>建築基準法では高さ20m以下の建築物には避雷針の設置義務は発生しません。しかし、20mに満たない建物が絶対に落雷しないという保障はありません。特に日本は雷が多く、万が一の落雷で思わぬ大きな被害を受ける例もあります。たとえば、周囲に高い建物がまったくない場合、平均的な一戸建てに雷が落ちることもあります。特に次のような場合は避雷針工事を検討した方が良いでしょう。</p>
+            <ul class="dotlist">
+              <li>煙突やアンテナなどの突起物がある</li>
+              <li>雷が多いエリアに建っている</li>
+              <li>山や丘陵の頂上、頂上付近に建っている</li>
+            </ul>
+
+            <h4>避雷針工事の判断基準</h4>
+            <p>一戸建てでも、下記の国土交通省監修による建築設備計画基準で36~38に達したならば、避雷針工事を行うのが望ましいとされています。</p>
+            <table class="dtable">
+              <tr><th>項目</th><th style="width:64px;text-align:center">指数</th></tr>
+              <tr><td>屋根が金属ではない鉄筋コンクリート造</td><td class="idx">2</td></tr>
+              <tr><td>金属・草葺以外の屋根で、煉瓦・コンクリート・石造</td><td class="idx">4</td></tr>
+              <tr><td>金属屋根でなおかつ金属枠で囲われているか鉄筋コンクリート造</td><td class="idx">5</td></tr>
+              <tr><td>金属・草葺以外の屋根で、木材枠または壁</td><td class="idx">7</td></tr>
+              <tr><td>木材枠の金属屋根で、煉瓦・コンクリート・石造</td><td class="idx">8</td></tr>
+              <tr><td>草葺屋根</td><td class="idx">10</td></tr>
+              <tr><td>同じ程度の高さの建築物・樹木が広範囲に存在</td><td class="idx">2</td></tr>
+              <tr><td>周囲に同じ程度の高さの建築物・樹木が2~3存在</td><td class="idx">5</td></tr>
+              <tr><td>完全に孤立・周囲建築物や樹木の2倍以上の高さ</td><td class="idx">10</td></tr>
+              <tr><td>平坦な地方</td><td class="idx">2</td></tr>
+              <tr><td>丘陵地帯</td><td class="idx">5</td></tr>
+              <tr><td>標高300~900mの山岳地帯</td><td class="idx">8</td></tr>
+              <tr><td>標高900m以上の山岳地帯</td><td class="idx">10</td></tr>
+              <tr><td>建物の高さが9m以下</td><td class="idx">2</td></tr>
+            </table>
+
+            <h4>避雷針工事の工程</h4>
+            <p>避雷針工事は次のような工程で施工されます。</p>
+            <h5>接地工事</h5>
+            <p>避雷針は落雷時に大きな電流を受けますが、それを地面に埋めた銅板などに流すことで建物を守ります。設置工事では、銅板などの接地抵抗値を10Ω以下と非常に小さくしなければならず、電気工事に関する十分な技術と経験が必要です。</p>
+            <h5>避雷針設置</h5>
+            <p>避雷針を設置します。一戸建てでは基本的に屋根の先端部分に取り付けます。</p>
+            <h5>アース線配線工事</h5>
+            <p>避雷針が受ける大電流に耐えるアース線を、避雷針本体から引き下げて、地中に埋めた銅板などに接続します。</p>
+            <h5>接地抵抗測定</h5>
+            <p>接地抵抗計(アーステクター)を使って接地抵抗値を測定します。正しい数値を確認できたら、避雷針工事の完了です。</p>
+
+            <h4>避雷針の耐用年数</h4>
+            <p>避雷針にも定期的なメンテナンスが必要です。避雷針は何度か落雷があった物と、まったく落雷がなかった物では消耗度は異なります。接地部分が劣化していないか、アース線が断絶していないかなど、定期的な点検作業を行わなくてはいけません。いずれにせよ、耐用年数は15~20年とされています。古くなった避雷針を撤去して、新しい避雷針を設置することも、避雷針工事の一種なのです。</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7 電気防食工事 -->
+      <article class="svc-card reveal" data-delay="1">
+        <div class="svc-head">
+          <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V5l-8-3zm1 5-3.2 6h2.4L11 18l4.5-7h-2.6L14.5 7H13z"/></svg></div>
+          <div>
+            <div class="svc-num">SERVICE 07</div>
+            <h3 class="svc-title">電気防食工事</h3>
+          </div>
+        </div>
+        <div class="svc-body">
+          <p class="svc-desc">電気防食工事とは、電流によって鋼材の劣化や損傷を防ぐシステムを作る電気工事のことです。塗装やメッキができない部分の金属の防食に役立ち、建物をより強固にします。金属防食工事にはいくつかの種類があり、状況に応じて選ぶことも可能です。</p>
+          <button class="svc-more" aria-expanded="false">詳しく見る <span class="pm"></span></button>
+        </div>
+        <div class="svc-detail">
+          <div class="svc-detail-in">
+            <p>電気防食工事とは、建物の金属部分に電気を流すことで腐食を防ぐ電気工事のことです。この時、流れる電流を防食電流といいます。建築物の構造上、塗装やメッキなどで防食できない部分を補強できる大変便利な方法です。電気防食の原理や具体的な方法などについて解説します。</p>
+
+            <h4>電気防食工事の原理</h4>
+            <p>金属の腐食とは具体的にいうと、電子がイオン化して金属面から脱落することです。サビもこのような原理によって生じています。金属の電子がイオン化するのを防ぐには、金属の電位を上げたり下げたりする操作が有効です。そのようにこうして、イオン化をストップさせるレベルの電圧を防食電圧といいます。電位を上げるか下げるかは、金属の種類、金属が置かれている環境にもよります。電気防食工事はこのような原理を利用して施工されているのです。</p>
+
+            <h4>電気防食工事のメリット</h4>
+            <p>電気防食は塗装やメッキができないところの金属を防食できるのが大きなメリットです。たとえば、コンクリートの中の鉄筋は、わずかなヒビなどから侵入してきた空気や水でサビてしまうリスクがあります。しかし、電気防食を施せば鉄筋の腐食を防ぐことも可能です。建物の強度を向上させることができるでしょう。</p>
+
+            <h4>電気防食工事の種類</h4>
+            <p>電気防食工事には以下のようにいくつかの種類があります。</p>
+            <h5>流電陽極方式</h5>
+            <p>水が染み込みやすかったり、土に触れる場所にある金属を、マグネシウム、亜鉛、アルミニウムなどのイオン化傾向の大きい金属につなぎます。そして、両者の電位差を利用して防食電流を流す電気防食工事です。現在の電気防食工事の主流の工法ともいえる手法です。外部電源による電気の供給を必要としないので、あらゆる場所に設置できるのもメリットといえるでしょう。</p>
+            <h5>外部電源方式</h5>
+            <p>かつての電気防食工事といえば外部電源方式が主流でした。これは、水中や土中に不溶性電極を置いて、直流電源装置の(+)極をつないで、腐食しやすい金属に(-)極を接続するという方法です。そして、不溶性電極から電気を流し、金属の電位を防食電位まで下げるというやり方ですが、設置場所が限られているなどデメリットも少なくありませんでした。</p>
+
+            <h4>電気防食工事の工程</h4>
+            <p>電気防食工事は次の様な工程で施工されます。</p>
+            <h5>事前調査</h5>
+            <p>防食対象となる金属の表面積、配置、周囲の環境などを調査します。その上で、電極の種類、防食電流の大きさなどを検討します。仮通電試験を行い、電極の種類と防食電流の大きさを決定します。</p>
+            <h5>土木工事</h5>
+            <p>電極設置場所によっては掘削などの土木工事が必要です。</p>
+            <h5>電極の設置</h5>
+            <p>設計書に基づいて電極を設置します。電気防食電源盤がある場合には配線も行います。</p>
+            <h5>完成測定</h5>
+            <p>電気防食工事が完成したら防食効果を測定します。さらに、消防署完成検査時にも立ち合い測定を行います。</p>
+            <h5>完成後の管理</h5>
+            <p>電気防食工事は完成後の管理も重要です。なぜならば、防食電位、防食電流は変動することが予測されるからです。防食不足や過防食になるのを回避するためにも、1年に1回以上の点検調節は欠かせません。</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="current-line" aria-hidden="true"></div>
+
+<!-- ============ 選ばれる理由 ============ -->
+<section class="local" id="local">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow" style="color:var(--amber)">REASON</span>
+      <h2 class="sec-title">アキヒサ電機が選ばれる理由</h2>
+      <p class="sec-lead">千葉県千葉市中央区を拠点に、暮らしに身近な電気工事から街のインフラを支える工事まで、確かな技術でお応えします。</p>
+    </div>
+    <div class="local-grid">
+      <div class="local-card reveal" data-delay="1">
+        <div class="lc-num">REASON 01</div>
+        <h3>千葉の地域密着</h3>
+        <p>千葉県千葉市中央区川戸町を拠点とする地元の電気工事会社です。地域に根ざしているからこそ、迅速で丁寧な対応が可能です。</p>
+      </div>
+      <div class="local-card reveal" data-delay="2">
+        <div class="lc-num">REASON 02</div>
+        <h3>有資格者による確かな施工</h3>
+        <p>電気工事は工事中にある程度の危険も伴うため、施工には資格が必要です。当社は千葉県知事許可(第050090号)を取得した建設業者として、法令に基づき安全に施工いたします。</p>
+      </div>
+      <div class="local-card reveal" data-delay="3">
+        <div class="lc-num">REASON 03</div>
+        <h3>幅広い工事に対応</h3>
+        <p>コンセント工事などの住宅向け工事から、交通信号設備・避雷針・電気防食工事といった専門性の高い工事まで、幅広く対応しています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 会社概要 ============ -->
+<section class="company" id="company">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">COMPANY</span>
+      <h2 class="sec-title">会社概要</h2>
+    </div>
+    <div class="company-flex">
+      <table class="ctable reveal" data-delay="1">
+        <tr><th>会社名</th><td>株式会社アキヒサ電機</td></tr>
+        <tr><th>代表者名</th><td>鈴木 美枝子(スズキ ミエコ)</td></tr>
+        <tr><th>所在地</th><td>〒260-0802<br>千葉県千葉市中央区川戸町377-1</td></tr>
+        <tr><th>他の拠点</th><td>〒260-0802<br>千葉県千葉市中央区川戸町352-55</td></tr>
+        <tr><th>電話番号</th><td><a class="tel-link" href="tel:043-266-1576">043-266-1576</a></td></tr>
+        <tr><th>資本金</th><td>10,000千円</td></tr>
+        <tr><th>建設業許可番号</th><td>千葉県知事許可 第050090号</td></tr>
+        <tr><th>業務内容</th><td>電気工事</td></tr>
+      </table>
+      <div class="map-card reveal" data-delay="2">
+        <div class="map-visual" aria-hidden="true">
+          <svg class="pinmap" viewBox="0 0 400 300">
+            <defs>
+              <radialGradient id="glow" cx="50%" cy="42%" r="50%">
+                <stop offset="0%" stop-color="rgba(255,200,69,.35)"/>
+                <stop offset="100%" stop-color="rgba(255,200,69,0)"/>
+              </radialGradient>
+            </defs>
+            <rect width="400" height="300" fill="transparent"/>
+            <g stroke="rgba(255,255,255,.12)" stroke-width="1.5" fill="none">
+              <path d="M-10,80 C90,60 160,110 250,90 S 380,60 420,80"/>
+              <path d="M-10,170 C70,150 180,200 280,175 S 380,150 420,170"/>
+              <path d="M120,-10 C110,80 150,160 130,310"/>
+              <path d="M260,-10 C270,90 230,180 255,310"/>
+            </g>
+            <circle cx="200" cy="128" r="70" fill="url(#glow)"/>
+            <g transform="translate(200,118)">
+              <path d="M0,-26 C-14,-26 -24,-15 -24,-3 C-24,12 0,32 0,32 C0,32 24,12 24,-3 C24,-15 14,-26 0,-26 Z" fill="#ffc845"/>
+              <circle cx="0" cy="-4" r="9" fill="#0d2334"/>
+            </g>
+            <text x="200" y="186" text-anchor="middle" fill="rgba(255,255,255,.92)" font-size="14" font-weight="700" letter-spacing="2" font-family="sans-serif">千葉市中央区川戸町</text>
+            <text x="200" y="208" text-anchor="middle" fill="rgba(255,255,255,.55)" font-size="11" letter-spacing="1" font-family="sans-serif">KAWADO-CHO, CHUO-KU, CHIBA</text>
+          </svg>
+        </div>
+        <div class="addr">
+          <strong>株式会社アキヒサ電機</strong>
+          千葉県千葉市中央区川戸町377-1<br>
+          TEL:043-266-1576
+        </div>
+        <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=%E5%8D%83%E8%91%89%E7%9C%8C%E5%8D%83%E8%91%89%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%B7%9D%E6%88%B8%E7%94%BA377-1" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Googleマップで見る
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ お問い合わせ ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">CONTACT</span>
+      <h2 class="sec-title">お問い合わせはコチラへ!</h2>
+      <p class="contact-lead">お問い合わせをお待ちしております。<br>ご不明な点がございましたら、まずはお気軽にご相談下さい。</p>
+    </div>
+    <div class="big-tel reveal" data-delay="1">
+      <div class="bt-label">お電話でのお問い合わせ</div>
+      <a class="bt-num" href="tel:043-266-1576">
+        <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+        043-266-1576
+      </a>
+      <p class="bt-note">スマートフォンの方は番号をタップすると発信できます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ フッター ============ -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-co">
+      <div class="f-logo">株式会社アキヒサ電機</div>
+      <p>
+        〒260-0802 千葉県千葉市中央区川戸町377-1<br>
+        <a class="f-tel" href="tel:043-266-1576">TEL.043-266-1576</a>
+      </p>
+    </div>
+    <div>
+      <div class="foot-h">電気工事</div>
+      <ul class="foot-list">
+        <li><a href="#services">コンセント工事</a></li>
+        <li><a href="#services">照明設備工事</a></li>
+        <li><a href="#services">ネオン設備工事</a></li>
+        <li><a href="#services">引込線工事</a></li>
+        <li><a href="#services">交通信号設備工事</a></li>
+        <li><a href="#services">避雷針工事</a></li>
+        <li><a href="#services">電気防食工事</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-h">MENU</div>
+      <ul class="foot-list">
+        <li><a href="#top">ホーム</a></li>
+        <li><a href="#local">選ばれる理由</a></li>
+        <li><a href="#company">会社概要</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">Copyright (C) 株式会社アキヒサ電機 All Rights Reserved.</div>
+</footer>
+
+<!-- スマホ固定電話バー -->
+<div class="sp-telbar">
+  <a href="tel:043-266-1576">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+    043-266-1576 <span class="small">|お気軽にご相談下さい</span>
+  </a>
+</div>
+
+<!-- ページトップ -->
+<button class="totop" id="totop" aria-label="ページトップに戻る">
+  <svg viewBox="0 0 24 24"><path d="M12 5l8 8-1.4 1.4L13 8.8V20h-2V8.8l-5.6 5.6L4 13z"/></svg>
+</button>
+
+<script>
+// ヘッダーのスクロール変化
+const header=document.getElementById('header');
+const totop=document.getElementById('totop');
+window.addEventListener('scroll',()=>{
+  const y=window.scrollY;
+  header.classList.toggle('scrolled',y>40);
+  totop.classList.toggle('show',y>600);
+},{passive:true});
+totop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+// モバイルメニュー
+const menuBtn=document.getElementById('menuBtn');
+const spNav=document.getElementById('spNav');
+menuBtn.addEventListener('click',()=>{
+  const open=spNav.classList.toggle('open');
+  menuBtn.classList.toggle('open',open);
+  menuBtn.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
+});
+spNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  spNav.classList.remove('open');menuBtn.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}));
+
+// スクロールリビール
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}
+  });
+},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// サービス詳細アコーディオン
+document.querySelectorAll('.svc-card').forEach(card=>{
+  const btn=card.querySelector('.svc-more');
+  const detail=card.querySelector('.svc-detail');
+  btn.addEventListener('click',()=>{
+    const isOpen=card.classList.contains('open');
+    if(isOpen){
+      detail.style.maxHeight=detail.scrollHeight+'px';
+      requestAnimationFrame(()=>{detail.style.maxHeight='0px';});
+      card.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      btn.firstChild.textContent='詳しく見る ';
+    }else{
+      detail.style.maxHeight=detail.scrollHeight+'px';
+      card.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+      btn.firstChild.textContent='閉じる ';
+      detail.addEventListener('transitionend',function h(){
+        if(card.classList.contains('open'))detail.style.maxHeight='none';
+        detail.removeEventListener('transitionend',h);
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
